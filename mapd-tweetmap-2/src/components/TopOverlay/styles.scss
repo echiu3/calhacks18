@@ -1,0 +1,55 @@
+@import "../../variables";
+
+.overlay {
+  position: absolute;
+  left: 0; right: 0;
+  z-index: 1;
+
+  .control {
+    padding: 0.8em;
+    display: flex;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: $light-grey;
+  }
+
+  a.icon {
+    margin: 0.25em;
+  }
+
+  @media (min-device-width: $mobile-breakpoint) {
+    .control {
+      padding: 0;
+      border-bottom-style: none;
+    }
+
+    a.icon {
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 25px;
+    }
+
+    a.tweetBar {
+      display: none;
+    }
+
+    .logo {
+      display: inherit;
+      width: 104px;
+      height: (281 / 308) * 104px;
+      margin-top: 30px;
+      margin-right: 25px;
+    }
+  }
+}

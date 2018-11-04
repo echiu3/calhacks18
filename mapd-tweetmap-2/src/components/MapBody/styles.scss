@@ -1,0 +1,62 @@
+@import "../../variables";
+
+a.mapbox-maplogo {
+  left: 1em;
+  bottom: 2em;
+}
+div.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  left: 1em;
+  white-space: nowrap;
+  background: transparent;
+}
+
+.popupHighlight {
+  height: $highlight-size;
+  width: $highlight-size;
+  position: absolute;
+  border-radius: $highlight-size;
+  border: 3px solid white;
+}
+
+.map-point-gfx {
+  pointer-events: none !important;
+}
+
+.labelRect {
+  fill: #22A7F0;
+}
+
+.labelDate {
+  fill: white;
+  text-anchor: middle;
+}
+
+.axis-label-edit, .axis-lock {
+  display: none !important;
+}
+
+@media (min-device-width: $mobile-breakpoint) {
+  a.mapbox-maplogo {
+    bottom: 24px + $line-chart-height;
+  }
+
+  div.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+    bottom: 4px + $line-chart-height;
+  }
+}
+
+.heat {
+  @media (min-device-width: $mobile-breakpoint) {
+    a.mapbox-maplogo {
+      bottom: 24px + $line-chart-height - 16px;
+    }
+
+    div.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+      bottom: 4px + $line-chart-height - 16px;
+    }
+  }
+}
+
+.mapboxgl-canvas {
+  cursor: default;
+}
